@@ -1,7 +1,7 @@
 {
   "name": "cozy-nest",
   "version": "1.0.0",
-  "description": "A beaitful landing page for a fictional housing company",
+  "description": "Beautiful landing page for a fictional housing company",
   "main": "index.html",
   "scripts": {
     "watch:scss": "sass ./sass/main.scss ./css/styles.css -w",
