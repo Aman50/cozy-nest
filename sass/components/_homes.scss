@@ -11,6 +11,7 @@
 .home {
     background-color: $color-gray-light-1;
     display: grid;
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.15);
     grid-template-columns: repeat(2, 1fr);
     row-gap: 3rem;
 
@@ -52,7 +53,6 @@
     &__feature {
         margin-left: 2rem;
         display: flex;
-        align-tracks: center;
         gap: 2rem;
         font-size: 1.2rem;
     }
