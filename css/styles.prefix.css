@@ -107,7 +107,7 @@ html {
   background-color: #fff;
 }
 .sidebar__toggle::before {
-  transform: translateY(-0.1rem);
+  transform: translateY(-0.9rem);
 }
 .sidebar__toggle::after {
   transform: translateY(0.5rem);
