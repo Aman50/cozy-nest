@@ -17,6 +17,10 @@ body {
 .heading-1 {
     @extend %heading;
 
+    font-size: 4.5rem;
+    line-height: 1;
+    color: $color-white;
+
 }
 
 .heading-2 {
