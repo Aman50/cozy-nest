@@ -70,6 +70,28 @@ html {
   background-color: #c69963;
   grid-row: 1/-1;
 }
+.sidebar__toggle {
+  height: 0.5rem;
+  width: 50%;
+  border: none;
+  border-radius: none;
+  outline: none;
+  background-color: #fff;
+  display: block;
+  margin: 3rem auto;
+}
+.sidebar__toggle::before, .sidebar__toggle::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  background-color: #fff;
+}
+.sidebar__toggle::before {
+  transform: translateY(-1rem);
+}
+.sidebar__toggle::after {
+  transform: translateY(0.5rem);
+}
 
 .header {
   background-color: #54483A;
