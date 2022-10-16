@@ -2,11 +2,15 @@
     background-color: $color-secondary;
     grid-column: full-start / full-end;
     padding: 8rem;
+
+    @include respond($tab-portrait) {
+        padding: 3rem;
+    }
 }
 
 .nav {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     list-style: none;
     gap: 1.5rem;
     align-items: center;

@@ -1,5 +1,9 @@
 html {
     font-size: convert_base_pixel_to_percent(10px);
+
+    @include respond($tab-landscape) {
+    font-size: convert_base_pixel_to_percent(8px);
+    }
 }
 
 body {

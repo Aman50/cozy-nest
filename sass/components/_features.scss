@@ -6,6 +6,10 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     align-items: start;
     gap: 6rem;
+
+    @include respond($tab-portrait) {
+        margin: 10rem 0;
+    }
 }
 
 .feature {

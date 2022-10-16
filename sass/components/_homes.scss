@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 7rem;
+
+    @include respond($tab-portrait) {
+        margin: 10rem 0;
+    }
 }
 
 .home {

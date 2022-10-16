@@ -9,6 +9,11 @@
     grid-template-rows: 1fr repeat(2, minmax(min-content, max-content)) 1fr;
     gap: 1.75rem;
 
+    @include respond($tab-portrait) {
+        grid-column: full-start / full-end;
+    }
+
+
     &__logo {
         width: 4.5rem;
         justify-self: center;
@@ -46,7 +51,8 @@
     }
 
     &__seenon-logo {
-        height: 2.5rem;
+        max-height: 2.5rem;
+        max-width: 100%;
         filter: brightness(70%);
     }
 }

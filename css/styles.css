@@ -9,6 +9,11 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Nunito", sans-serif;
@@ -76,6 +81,15 @@ html {
   background-color: #c69963;
   grid-row: 1/-1;
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar {
+    grid-row: 1/span 1;
+    grid-column: 1/-1;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+  }
+}
 .sidebar__toggle {
   height: 0.5rem;
   width: 50%;
@@ -98,6 +112,13 @@ html {
 .sidebar__toggle::after {
   transform: translateY(0.5rem);
 }
+@media only screen and (max-width: 56.25em) {
+  .sidebar__toggle {
+    width: 4.5rem;
+    margin: 0;
+    margin-right: 3rem;
+  }
+}
 
 .header {
   background-color: #54483A;
@@ -109,6 +130,11 @@ html {
   display: grid;
   grid-template-rows: 1fr repeat(2, minmax(min-content, max-content)) 1fr;
   gap: 1.75rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .header {
+    grid-column: full-start/full-end;
+  }
 }
 .header__logo {
   width: 4.5rem;
@@ -141,7 +167,8 @@ html {
   column-gap: 3rem;
 }
 .header__seenon-logo {
-  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 100%;
   filter: brightness(70%);
 }
 
@@ -155,12 +182,28 @@ html {
   align-content: center;
   row-gap: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .realtors {
+    grid-column: full-start/full-end;
+    padding: 5rem;
+  }
+}
 .realtors__list {
   display: grid;
   grid-template-columns: min-content max-content;
   row-gap: 4vh;
   column-gap: 2rem;
   align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .realtors__list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .realtors__list {
+    grid-template-columns: min-content max-content;
+  }
 }
 .realtors .realtor__img {
   width: 7rem;
@@ -182,6 +225,11 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   align-items: start;
   gap: 6rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .features {
+    margin: 10rem 0;
+  }
 }
 
 .feature {
@@ -211,11 +259,23 @@ html {
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
 }
+@media only screen and (max-width: 37.5em) {
+  .story__pictures {
+    grid-column: full-start/full-end;
+    padding: 6rem;
+  }
+}
 .story__img--1 {
   width: 100%;
   grid-row: 2/span 4;
   grid-column: 2/-2;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width: 37.5em) {
+  .story__img--1 {
+    grid-row: 1/-1;
+    grid-column: 1/-2;
+  }
 }
 .story__img--2 {
   width: 115%;
@@ -223,6 +283,12 @@ html {
   grid-column: 4/-1;
   z-index: 2;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width: 37.5em) {
+  .story__img--2 {
+    width: 100%;
+    grid-row: 2/-2;
+  }
 }
 .story__content {
   background-color: #f9f7f5;
@@ -232,6 +298,12 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media only screen and (max-width: 37.5em) {
+  .story__content {
+    grid-column: full-start/full-end;
+    padding: 5rem 6vw;
+  }
 }
 .story__text {
   font-size: 1.5rem;
@@ -244,6 +316,11 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .homes {
+    margin: 10rem 0;
+  }
 }
 
 .home {
@@ -373,10 +450,15 @@ html {
   grid-column: full-start/full-end;
   padding: 8rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .footer {
+    padding: 3rem;
+  }
+}
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   list-style: none;
   gap: 1.5rem;
   align-items: center;
@@ -437,6 +519,12 @@ html {
   display: grid;
   grid-template-rows: 80vh min-content 80vh repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    grid-template-rows: 5rem calc(100vh - 5rem);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
