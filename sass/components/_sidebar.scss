@@ -11,7 +11,7 @@
     }
 
     &__toggle {
-        height: .5rem;
+        height: .4rem;
         width: 50%;
         border: none;
         border-radius: none;
@@ -24,12 +24,12 @@
         &::after {
             content: '';
             display: block;
-            height: .5rem;
+            height: .4rem;
             background-color: $color-white;
         }
 
         &::before {
-            transform: translateY(-1rem);
+            transform: translateY(-.1rem);
         }
 
         &::after {

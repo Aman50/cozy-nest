@@ -1,3 +1,7 @@
 @function convert_base_pixel_to_percent($pixel) {
-    @return calc($pixel/16px * 100%);
+    @return calc($pixel / 16px * 100%);
+}
+
+@function pixel_to_em($pixel) {
+    @return calc($pixel / 16px * 1em);
 }

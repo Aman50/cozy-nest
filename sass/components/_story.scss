@@ -3,7 +3,7 @@
         background-color: $color-primary;
         grid-column: full-start / col-end 4;
 
-        background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url('../img/back.jpg');
+        background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url('../img/back-1x.jpg');
         background-size: cover;
 
         display: grid;
@@ -15,6 +15,12 @@
             grid-column: full-start / full-end;
             padding: 6rem;
         }
+
+        @media only screen and (min-resolution: 192dpi) and (min-width: pixel_to_em($phone)),
+                               (-webkit-min-device-pixel-ratio: 2) and (min-width: pixel_to_em($phone)),
+                               (min-width: $tab-landscape) {
+            background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url('../img/back-2x.jpg');
+                               }
     }
 
     &__img--1 {
